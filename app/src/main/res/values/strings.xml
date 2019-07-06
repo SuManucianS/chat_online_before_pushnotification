@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Chat Application</string>
+    <string name="app_name">ChatPr Sự Trungg</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="agora_id">9a5a21069b3e4f13ae6e0a0f93a9f116</string>
 </resources>

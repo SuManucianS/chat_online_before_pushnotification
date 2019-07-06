@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_imguser"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:visibility="gone"></de.hdodenhof.circleimageview.CircleImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_right"
+            android:text="Doge meme"
+            android:layout_alignParentEnd="true"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"
+            android:padding="8dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/showmessage"/>
+    </RelativeLayout>
+</RelativeLayout>

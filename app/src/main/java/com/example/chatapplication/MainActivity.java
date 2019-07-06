@@ -4,16 +4,22 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
 
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.chatapplication.system.loginActivity;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
     Button btnsend, btnout;
-
+    FirebaseUser fuser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,4 +48,14 @@ public class MainActivity extends Activity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        fuser = FirebaseAuth.getInstance().getCurrentUser();
+        if (fuser!= null){
+            Intent intent = new Intent(MainActivity.this, dashBoard.class);
+            startActivity(intent);
+            finish();
+        }
+    }
 }

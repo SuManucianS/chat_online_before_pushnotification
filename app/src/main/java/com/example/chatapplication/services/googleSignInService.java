@@ -58,7 +58,7 @@ public class googleSignInService {
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
-                Toast.makeText(mContext, "failed", Toast.LENGTH_LONG).show();
+                Toast.makeText(mContext, "failed : " + e, Toast.LENGTH_LONG).show();
                 // ...
             }
         }
